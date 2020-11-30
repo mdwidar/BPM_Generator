@@ -8,7 +8,7 @@ public class bpmGenerate extends BPM_Generator_Driver {
 	
 	public int bpmGenerate {
 		
-	//tempoEvent1 + tempoEvent2 convert to milliseconds
+	//We don't need to convert to milliseconds here because the capture in Chronograph does this for us
 	
 	tempoDiff = tempoEvent2-tempoEvent1;
 	
