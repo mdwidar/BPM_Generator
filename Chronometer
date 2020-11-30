@@ -20,6 +20,10 @@ public final class Chronometer{
         return end-begin;
     }
 
+    //**
+    //The following is commented out as we only need the getMilliseconds method.
+    //**
+    
     //public double getSeconds() {
     //    return (end - begin) / 1000.0;
     //}
