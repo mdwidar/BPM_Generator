@@ -2,11 +2,11 @@ import java.util.Math;
 
 public class bpmGenerate extends BPM_Generator_Driver {
 	
-	private int tempoEvent1;
-	private int tempoEvent2;
-	private int tempoDiff;
+	private long tempoEvent1;
+	private long tempoEvent2;
+	private long tempoDiff;
 	
-	public int bpmGenerate {
+	public long bpmGenerate {
 		
 	//We don't need to convert to milliseconds here because the capture in Chronograph does this for us
 	
