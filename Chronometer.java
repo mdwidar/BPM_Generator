@@ -1,36 +1,27 @@
 //Simple Java Chronometer
 //Published by Silveira on 15 March, 2008
+//Edited by Tyler, Charlie, and Marwa
 
-public final class Chronometer{
-    private long begin, end;
+public final class Chronometer {
+    
+    private long tempoEvent1, tempoEvent2;
 
     public void start(){
-        begin = System.currentTimeMillis();
+        tempoEvent1 = System.currentTimeMillis();
     }
 
     public void stop(){
-        end = System.currentTimeMillis();
+        tempoEvent2 = System.currentTimeMillis();
     }
 
     public long getTime() {
-        return end-begin;
+        return tempoEvent2-tempoEvent1;
     }
 
     public long getMilliseconds() {
-        return end-begin;
+        return tempoEvent2-tempoEvent1;
     }
-
-    //public double getSeconds() {
-    //    return (end - begin) / 1000.0;
-    //}
-
-    //public double getMinutes() {
-    //    return (end - begin) / 60000.0;
-    //}
-
-    //public double getHours() {
-    //    return (end - begin) / 3600000.0;
-    //}
+    
 
     public static void main(String[] arg) {
         Chronometer ch = new Chronometer();
