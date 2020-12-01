@@ -1,6 +1,8 @@
 //**For testing and checking the math, use the "Quarter" column in the chart link in Line 2
 //https://guitargearfinder.com/wp-content/uploads/2014/03/bpm-to-ms.jpg
 
+//For reference: 1 second = 1000 milliseconds
+
 import java.util.Math;
 
 public class bpmGenerate extends BPM_Generator_Driver {
