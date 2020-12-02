@@ -5,7 +5,7 @@
 public class Chronometer {
     
     protected static long tempoEvent1;
-	protected static long tempoEvent2;
+    protected static long tempoEvent2;
 
     public void start(){
         tempoEvent1 = System.currentTimeMillis();
