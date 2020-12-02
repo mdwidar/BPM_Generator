@@ -11,7 +11,7 @@ public class bpmGenerate extends BPM_Generator_Driver {
 	private long tempoEvent2;
 	private long tempoDiff;
 	
-	public long bpmGenerate {
+	public long bpmGenerate() {
 	
 	//Calculate temporal distance between start and stop in milliseconds
 	tempoDiff = tempoEvent2-tempoEvent1;
