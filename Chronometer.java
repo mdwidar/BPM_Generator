@@ -2,9 +2,10 @@
 //Published by Silveira on 15 March, 2008
 //Edited by Tyler, Charlie, and Marwa
 
-public final class Chronometer {
+public class Chronometer {
     
-    private long tempoEvent1, tempoEvent2;
+    protected static long tempoEvent1;
+	protected static long tempoEvent2;
 
     public void start(){
         tempoEvent1 = System.currentTimeMillis();
