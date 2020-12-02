@@ -25,5 +25,5 @@ public class bpmGenerate extends BPM_Generator_Driver {
 	//Return BPM (beats per minute)
 	return tempoDiff;
 		
-	} //end of class
-} // end of main
+	} //end of method
+} // end of class
