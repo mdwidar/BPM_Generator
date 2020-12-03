@@ -9,11 +9,15 @@
 import java.awt.event.*;
 import javax.swing.*;
 
-@SuppressWarnings("serial")
 public class StopWatchRunner extends JLabel
             implements MouseListener, ActionListener {
 
-   private long startTime;   // Start time of stopwatch.
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+private long startTime;   // Start time of stopwatch.
                              //   (Time is measured in milliseconds.)
 
    private boolean running;  // True when the stopwatch is running.
@@ -58,16 +62,15 @@ public class StopWatchRunner extends JLabel
       else {
             // Stop the stopwatch.  Compute the elapsed time since the
             // stopwatch was started and display it.
-    	 long endTime = evt.getWhen();
          timer.stop();
          running = false;
-         
+         long endTime = evt.getWhen();
          double milliseconds = (endTime - startTime);
          
-         //Added code to display the beats per minute
-         beatsPerMinute = (milliseconds/6);
-         
-         setText("<html>End Time: " + milliseconds + " milliseconds." + "<br>" + "The tempo is: " + beatsPerMinute + " beats per minute.<html>");
+         	//Added code to display the beats per minute
+         beatsPerMinute = (60000/milliseconds);
+        
+         setText("<html> BPM Generator" + "<br>" + "Distance between inputs: " + milliseconds + " milliseconds." + "<br>" + "The tempo is: " + Math.round(beatsPerMinute) + " beats per minute.<html>");
          
       }
    }
@@ -78,4 +81,3 @@ public class StopWatchRunner extends JLabel
    public void mouseExited(MouseEvent evt) { }
 
 }  // end StopWatchRunner
-
