@@ -1,8 +1,8 @@
 /**CIS111BONLN
 * @author Tyler Martin, Marwa Dwidar, Charlie Bivinghouse
 * @date 12/17/2020
-* Final Project - BPM Generator
-* Original Creator/Design/Writer of TestStopWatch - David J Eck.
+* Final Project - BPM_Generator
+* Original Creator/Design/Writer of TestStopWatch(Changed name to fit our purpose to BPM_Generator) - David J Eck.
 */
 
 import java.awt.*;
@@ -10,7 +10,7 @@ import javax.swing.*;
 
 import java.awt.Toolkit;
 
-public class TestStopWatch {
+public class BPM_Generator_Main {
 	
     public static void main(String[] args) {
         JFrame frame = new JFrame();
