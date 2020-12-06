@@ -1,8 +1,8 @@
 /**CIS111BONLN
 * @author Tyler Martin, Marwa Dwidar, Charlie Bivinghouse
 * @date 12/17/2020
-* Final Project - BPM_Generator
-* Original Creator/Design/Writer of TestStopWatch(Changed name to fit our purpose to BPM_Generator) - David J Eck.
+* Final Project - BPM Generator
+* Original Creator/Design/Writer of TestStopWatch - David J Eck.
 */
 
 import java.awt.*;
@@ -16,7 +16,7 @@ public class BPM_Generator_Main {
         JFrame frame = new JFrame();
         frame.setLayout(new BorderLayout());
 
-        StopWatchRunner watch = new StopWatchRunner();
+        BPM_Generator watch = new BPM_Generator();
         watch.setFont( new Font("SansSerif", Font.BOLD, 16) );
         watch.setBackground(Color.black);
         watch.setForeground( new Color(180,180,180) );
