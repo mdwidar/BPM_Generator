@@ -119,4 +119,4 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
    public void mouseEntered(MouseEvent evt) { }
    public void mouseExited(MouseEvent evt) { }
 
-}  // end StopWatchRunner
+}  // end BPM_Generator
