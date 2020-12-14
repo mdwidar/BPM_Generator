@@ -104,7 +104,8 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
          " Half-Time: " + Math.round(halftimeBPM) + " beats per minute." + "<br>" +
          "Double-Time: " + Math.round(doubletimeBPM) + " beats per minute." + "<br>" +
          "Quarter Note Triplet: " + Math.round(quarterTripBPM) + " beats per minute." + "<br>" +
-         "Dotted Quarter Note: " + Math.round(dottedBPM) + " beats per minute. </center>" + "<html>");
+         "Dotted Quarter Note: " + Math.round(dottedBPM) + " beats per minute. </center>" + "<br>" + 
+         "<center> <h4> Click again to retry or close the window to exit. </h6> </center>" + "<html>");
 	      
          //Play metronome of BPM
          BPM_Generator_Metronome_beep metronome1 = new BPM_Generator_Metronome_beep(beatsPerMinute,1);
