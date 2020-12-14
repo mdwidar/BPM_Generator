@@ -27,6 +27,16 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
    private Timer timer;  // A timer that will generate events while the stopwatch is running
 
    public double beatsPerMinute; //Calculates the beats per minute
+	
+   public double halftimeBPM; //Calculates half-time feel of given BPM
+   
+   public double doubletimeBPM; // Calculates double-time feel of given BPM
+   
+   public double quarterTripBPM; //Calculates quarter note triplet feel of given BPM
+   
+   public double dottedBPM; //Calculates dotted quarter note feel of given BPM
+   
+   public double thirdOfBPM; //Contains value for calculating dottedBPM
 
    // Constructor
    public BPM_Generator() { 
@@ -74,9 +84,28 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
          //Calculate BPM (beats per minute) ratio from milliseconds
          beatsPerMinute = (60000/milliseconds);
         
-         //Display stopwatch milliseconds and BPM calculation result
-         setText("<html> BPM Generator" + "<br>" + "Distance between inputs: " + milliseconds + " milliseconds." + "<br>" + "The tempo is: " + Math.round(beatsPerMinute) + " beats per minute.<html>");
+          //Calculate BPM in half-time
+         halftimeBPM = (beatsPerMinute/2);
          
+         //Calculate BPM in double-time
+         doubletimeBPM = (beatsPerMinute*2);
+         
+         //Calculate BPM in quarter note triplet feel
+         quarterTripBPM = beatsPerMinute + halftimeBPM;
+         
+         //Calculate BPM in dotted quarter note feel
+         thirdOfBPM = beatsPerMinute/3;
+         dottedBPM = beatsPerMinute + thirdOfBPM;
+         
+         //Display stopwatch milliseconds and BPM calculation result
+         setText("<html> <h1> <center> BPM Generator </center> </h1>" + "<br>" + "<center> Distance between inputs: " + milliseconds + " milliseconds. </center>" + "<br>" +
+         "The tempo (as quarter notes in 4/4 time) is: " + "<br> <center>" + Math.round(beatsPerMinute) + " beats per minute. </center>" + "<br>" +
+         "<center> Tempo Reference Calculations: " + "<br>" +
+         " Half-Time: " + Math.round(halftimeBPM) + " beats per minute." + "<br>" +
+         "Double-Time: " + Math.round(doubletimeBPM) + " beats per minute." + "<br>" +
+         "Quarter Note Triplet: " + Math.round(quarterTripBPM) + " beats per minute." + "<br>" +
+         "Dotted Quarter Note: " + Math.round(dottedBPM) + " beats per minute. </center>" + "<html>");
+	      
          //Play metronome of BPM
          BPM_Generator_Metronome_beep metronome1 = new BPM_Generator_Metronome_beep(beatsPerMinute,1);
       	 metronome1.start();
