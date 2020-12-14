@@ -25,7 +25,7 @@ public class BPM_Generator_Main {
         frame.add(watch, BorderLayout.CENTER);
                         
         
-        frame.setSize(new Dimension(480, 480));
+        frame.setSize(new Dimension(560, 400));
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         frame.setLocation(dim.width/2-frame.getSize().width/2, dim.height/2-frame.getSize().height/2);    
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
