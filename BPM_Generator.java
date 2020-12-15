@@ -6,11 +6,12 @@
 */
 
 /*
-   A component that acts as a simple stop-watch.  When the user clicks
-   on it, this component starts timing.  When the user clicks again,
+   The BPM_Generator is a metronome that derives tempo using a stop-watch function.  
+   When the user clicks on it, this metronome starts timing.  When the user clicks again,
    it displays the time between the two clicks.  Clicking a third time
-   starts another timer, etc.  While it is timing, the label just
-   displays the whole number of seconds since the timer was started.
+   starts the process over again. After the temporal distance between clicks 
+   is measured, the program produces an output displaying the BPM of the clicked tempo.
+   There are additional calculations added for variations on the generated BPM.
 */
 
 import java.awt.event.*;
@@ -38,14 +39,14 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
    
    public double thirdOfBPM; //Contains value for calculating dottedBPM
 
-   // Constructor
+   // Constructor for BPM_Generator
    public BPM_Generator() { 
       super("  Click to start timer.  ", JLabel.CENTER);
       addMouseListener(this);
    }
    
    // This will be called when an event from the
-   // timer is received.  It just sets the stopwatch
+   // timer is received.  It just sets the metronome
    // to show the amount of time that it has been running.
    // Time is rounded down to the nearest second.
    
@@ -56,13 +57,13 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
    }
    
    // React when user presses the mouse by
-   // starting or stopping the stopwatch.  Also start
+   // starting or stopping the metronome.  Also start
    // or stop the timer.
    
    public void mousePressed(MouseEvent evt) {
       if (running == false) {
          
-    	 // Record the time and start the stopwatch.
+    	 // Record the time and start the metronome.
          running = true;
          startTime = evt.getWhen();  // Time when mouse was clicked.
          setText("Running:  0 milliseconds");
@@ -74,8 +75,8 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
 	            timer.restart();
       }
       else {
-         // Stop the stopwatch.  Compute the elapsed time since the
-         // stopwatch was started and display it.
+         // Stop the metronome time capture.  Compute the elapsed time since the
+         // metronome was started and display the value as a tempo (BPM).
          timer.stop();
          running = false;
          long endTime = evt.getWhen();
