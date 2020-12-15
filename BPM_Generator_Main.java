@@ -16,12 +16,12 @@ public class BPM_Generator_Main {
         JFrame frame = new JFrame();
         frame.setLayout(new BorderLayout());
 
-        BPM_Generator watch = new BPM_Generator();
-        watch.setFont( new Font("SansSerif", Font.BOLD, 16) );
-        watch.setBackground(Color.black);
-        watch.setForeground( new Color(180,180,180) );
-        watch.setOpaque(true);
-        watch.setSize(480, 480);
+        BPM_Generator generator = new BPM_Generator();
+        generator.setFont( new Font("SansSerif", Font.BOLD, 16) );
+        generator.setBackground(Color.black);
+        generator.setForeground( new Color(180,180,180) );
+        generator.setOpaque(true);
+        generator.setSize(480, 480);
         frame.add(watch, BorderLayout.CENTER);
                         
         
