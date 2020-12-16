@@ -1,6 +1,12 @@
-/**CIS111BONLN
+/**
+* Main defines the JFrame window and the UI to help
+* user see the information as it is produced. If there
+* is an error or a need to change the window size, please
+* adjust accordingly using Line 34.
+* 
+* CIS111BONLN
 * @author Tyler Martin, Marwa Dwidar, Charlie Bivinghouse
-* @date 12/17/2020
+* @date 12/18/2020
 * Final Project - BPM Generator
 * Original Creator/Design/Writer of TestStopWatch - David J Eck.
 */
@@ -15,7 +21,8 @@ public class BPM_Generator_Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setLayout(new BorderLayout());
-
+		
+      	//Create BPM_Generator and define design parameters
         BPM_Generator generator = new BPM_Generator();
         generator.setFont( new Font("SansSerif", Font.BOLD, 16) );
         generator.setBackground(Color.black);
@@ -24,7 +31,7 @@ public class BPM_Generator_Main {
         generator.setSize(480, 480);
         frame.add(watch, BorderLayout.CENTER);
                         
-        
+        //Clarify and provide more design parameters
         frame.setSize(new Dimension(560, 400));
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         frame.setLocation(dim.width/2-frame.getSize().width/2, dim.height/2-frame.getSize().height/2);    
