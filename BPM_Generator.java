@@ -1,17 +1,16 @@
-/**CIS111BONLN
+/**
+* The BPM_Generator is a metronome that derives tempo using a stop-watch function.  
+* When the user clicks on it, this metronome starts timing.  When the user clicks again,
+* it displays the time between the two clicks.  Clicking a third time
+* starts the process over again. After the temporal distance between clicks 
+* is measured, the program produces an output displaying the BPM of the clicked tempo.
+* There are additional calculations added for variations on the generated BPM.
+*
+* CIS111BONLN
 * @author Tyler Martin, Marwa Dwidar, Charlie Bivinghouse
-* @date 12/17/2020
+* @date 12/18/2020
 * Final Project - BPM Generator
 * Original Creator/Design/Writer of StopWatchRunner - David J Eck.
-*/
-
-/*
-   The BPM_Generator is a metronome that derives tempo using a stop-watch function.  
-   When the user clicks on it, this metronome starts timing.  When the user clicks again,
-   it displays the time between the two clicks.  Clicking a third time
-   starts the process over again. After the temporal distance between clicks 
-   is measured, the program produces an output displaying the BPM of the clicked tempo.
-   There are additional calculations added for variations on the generated BPM.
 */
 
 import java.awt.event.*;
@@ -40,7 +39,7 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
    public double thirdOfBPM; //Contains value for calculating dottedBPM
 
    /** 
-     Default Constructor for BPM_Generator
+   	Default Constructor for BPM_Generator
    **/
    public BPM_Generator() { 
       super("  Click to start timer.  ", JLabel.CENTER);
@@ -48,9 +47,9 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
    }
    
    /** This will be called when an event from the
-    timer is received.  It just sets the metronome
-    to show the amount of time that it has been running.
-    Time is rounded down to the nearest second. **/
+      timer is received.  It just sets the metronome
+      to show the amount of time that it has been running.
+      Time is rounded down to the nearest second.**/
    
    public void actionPerformed(ActionEvent evt) {
        long time = (System.currentTimeMillis() - startTime);
@@ -59,8 +58,8 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
    }
    
    /** React when user presses the mouse by
-       starting or stopping the metronome.  Also start
-       or stop the timer. **/
+      starting or stopping the metronome.  Also start
+      or stop the timer. **/
    
    public void mousePressed(MouseEvent evt) {
       if (running == false) {
