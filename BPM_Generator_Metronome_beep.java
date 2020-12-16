@@ -1,35 +1,44 @@
-/**CIS111BONLN
+/**
+* This class allows for the use of a system soundfont to
+* produce a metronome for the given BPM found in BPM_Generator.
+* The "for loop" at Line 51 can be adjusted to any length as needed.
+*
+* CIS111BONLN
 * @author Tyler Martin, Marwa Dwidar, Charlie Bivinghouse
-* @date 12/17/2020
+* @date 12/18/2020
 * Final Project - BPM Generator
 * Original Creator/Design/Writer of Metronome - Rosetta Code.
 */
 
 //Source for sound: https://www.rgagnon.com/javadetails/java-0001.html
+	
 
 import java.awt.*;
 
 public class BPM_Generator_Metronome_beep {
 	
-	/**
-	 * 
-	 */
 	private final long serialVersionUID = 1L;
 
-	double beatsPerMinute;
-	int measure, counter;
+	double beatsPerMinute; //Contains value for BPM
+	int measure, counter; //Contains counter for metronome speed
 	
-	//Setter/Mutator for Metronome
+    /**
+    Setter/Mutator for Metronome
+    **/
 	public void setBPM(double beatsPerMinute) {
 		this.beatsPerMinute = beatsPerMinute;
 	}
 	
-	//Getter/Accessor for Metronome
+    /**
+    Getter/Accessor for Metronome
+    **/
 	public double getBPM() {
 		 return beatsPerMinute;
 	}
 
-	//Metronome Constructor
+    /**
+    Default Constructor for Metronome
+    **/
 	public BPM_Generator_Metronome_beep (double beatsPerMinute, int measure){
 		this.beatsPerMinute = beatsPerMinute;
 		this.measure = measure;	
@@ -38,7 +47,7 @@ public class BPM_Generator_Metronome_beep {
 	//Start method to begin metronome sound production
 	public void start(){
 		//To set amount of metronome quarter notes during runtime, adjust "i< # of beats"
-		//**This for loop was originally a while loop set to (true); exercise caution as this created an infinite loop!!**
+		//This for loop was originally a while loop set to (true); exercise caution as this created an infinite loop!
 		for(int i=0; i<9; i++){
 			try {
 				Thread.sleep((long)(1000*(60.0/beatsPerMinute)));
