@@ -29,7 +29,7 @@ public class BPM_Generator_Main {
         generator.setForeground( new Color(180,180,180) );
         generator.setOpaque(true);
         generator.setSize(480, 480);
-        frame.add(watch, BorderLayout.CENTER);
+        frame.add(generator, BorderLayout.CENTER);
                         
         //Clarify and provide more design parameters
         frame.setSize(new Dimension(560, 400));
