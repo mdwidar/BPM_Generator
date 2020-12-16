@@ -39,16 +39,17 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
    
    public double thirdOfBPM; //Contains value for calculating dottedBPM
 
-   // Constructor for BPM_Generator
+   /** Default Constructor for BPM_Generator
+   **/
    public BPM_Generator() { 
       super("  Click to start timer.  ", JLabel.CENTER);
       addMouseListener(this);
    }
    
-   // This will be called when an event from the
-   // timer is received.  It just sets the metronome
-   // to show the amount of time that it has been running.
-   // Time is rounded down to the nearest second.
+   /** This will be called when an event from the
+    timer is received.  It just sets the metronome
+    to show the amount of time that it has been running.
+    Time is rounded down to the nearest second. **/
    
    public void actionPerformed(ActionEvent evt) {
        long time = (System.currentTimeMillis() - startTime);
@@ -56,9 +57,9 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
        
    }
    
-   // React when user presses the mouse by
-   // starting or stopping the metronome.  Also start
-   // or stop the timer.
+   /** React when user presses the mouse by
+       starting or stopping the metronome.  Also start
+       or stop the timer. **/
    
    public void mousePressed(MouseEvent evt) {
       if (running == false) {
