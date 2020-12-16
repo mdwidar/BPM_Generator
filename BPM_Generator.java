@@ -39,7 +39,8 @@ public class BPM_Generator extends JLabel implements MouseListener, ActionListen
    
    public double thirdOfBPM; //Contains value for calculating dottedBPM
 
-   /** Default Constructor for BPM_Generator
+   /** 
+     Default Constructor for BPM_Generator
    **/
    public BPM_Generator() { 
       super("  Click to start timer.  ", JLabel.CENTER);
